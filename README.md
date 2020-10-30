@@ -11,6 +11,7 @@ The code can be broken down into 4 parts, which are explained on the basis of th
 # Definition of Functions
 
 ## Preparation of the source data: 
+
 prepare_source_data-
 
 For the preparation of the source data, the URLs that were involved with having an economic impact due to COVID 19 were manually selected and a dictionary was built.
@@ -26,11 +27,13 @@ The threshold value was set at 0.8, which means that if the score in the similar
 ## Scraping and processing of websites:
 
 get_text_from_html-
+
 The website was scraped using requests library and this generated a html document. This html content was processed using beautifulsoup so that all the html tags were removed and the text from it was isolated.
 
 ## Generation of URLs:
 
 get_urls:
+
 The warc file from the commoncrawl website of the months March/Arpril 2020 were extracted and the webpages in this duration were considered.
 These selected webpages were compared with the webpages in the source data using the Gensen library and the similar webpages were extracted.
 
